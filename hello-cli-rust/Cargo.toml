@@ -1,0 +1,9 @@
+[package]
+name = "hello-cli-rust"
+version = "1.0.0"
+authors = ["feuyeux <feuyeux@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.32"
+num_cpus = "1.0"

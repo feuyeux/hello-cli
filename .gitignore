@@ -157,3 +157,4 @@ Cargo.lock
 .history
 
 # End of https://www.gitignore.io/api/go,rust,java,maven,intellij+iml,visualstudiocode,macos
+/build/

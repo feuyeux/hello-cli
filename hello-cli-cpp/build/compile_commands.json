@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/han/cooding/feuyeux/hello-cli/hello-cli-cpp/build",
-  "command": "/usr/bin/clang++  -DARCHITECTURE=x86_64 -DCOMPILER_NAME=\\\"AppleClang\\\" -DIS_64_BIT_ARCH -I/Users/han/cooding/feuyeux/hello-cli/hello-cli-cpp/build/generated  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/hello.dir/hello.cpp.o -c /Users/han/cooding/feuyeux/hello-cli/hello-cli-cpp/hello.cpp",
-  "file": "/Users/han/cooding/feuyeux/hello-cli/hello-cli-cpp/hello.cpp"
-}
-]

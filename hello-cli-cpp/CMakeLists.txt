@@ -30,7 +30,6 @@ else()
     message(STATUS "Configuring on/for ${CMAKE_SYSTEM_NAME}")
 endif()
 
-
 # 创建目标——静态库。库的名称和源码文件名相同，第一个参数是目标名，生成库根据第二个参数(STATIC或SHARED)和操作系统确定
 # add_library(message STATIC Message.hpp Message.cpp)
 
@@ -44,7 +43,7 @@ target_compile_features(CLI11::CLI11 INTERFACE cxx_std_11)
 
 # 指示CMake创建一个新目标：可执行文件hello。这个可执行文件是通过编译和链接源文件hello.cpp生成的。
 # CMake将为编译器使用默认设置，并自动选择生成工具
-add_executable(hello hello.cpp)
+add_executable(hello src/hello.cpp)
 
 target_compile_definitions(hello PUBLIC "COMPILER_NAME=\"${CMAKE_CXX_COMPILER_ID}\"")
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)

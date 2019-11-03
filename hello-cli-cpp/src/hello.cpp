@@ -52,7 +52,13 @@ std::string say_cpu() {
 #endif
 }
 
-int main() {
+int main(int argc, char const *argv[])
+{
+  printf("dddd");
+}
+
+void x()
+{
   std::cout << say_os() << std::endl;
   std::cout << say_compile() << std::endl;
   std::cout << say_cpu() << std::endl;

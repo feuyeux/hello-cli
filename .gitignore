@@ -150,7 +150,12 @@ Cargo.lock
 **/*.rs.bk
 
 ### VisualStudioCode ###
-.vscode
+.vscode/*
+!c_cpp_properties.json
+!tasks.json
+!launch.json
+!compile_commands.json 
+!settings.json
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files

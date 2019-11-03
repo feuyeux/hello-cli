@@ -1,0 +1,14 @@
+{
+    "cmake.debugConfig": {
+        "stopAtEntry": false,
+        "MIMode": "lldb",
+        "miDebuggerPath": "/Users/han/.vscode/extensions/ms-vscode.cpptools-0.26.1/debugAdapters/lldb/bin/lidb-mi",
+        "internalConsoleOptions":"openOnSessionStart",
+        "showDisplayString":false,
+        "logging": {
+            "trace": true,
+            "engineLogging": true,
+            "traceResponse": true
+        }
+    }
+}

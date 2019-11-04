@@ -3,7 +3,10 @@ extern crate num_cpus;
 
 use clap::{App, Arg, SubCommand};
 
+static AUTHOR: &str = "ERIC";
+
 fn main() {
+    println!("{}", AUTHOR);
     let matches = App::new("hello-cli")
         .version("1.0.0")
         .subcommand(
@@ -17,9 +20,9 @@ fn main() {
             let value = matches.value_of("cores").unwrap();
             match value {
                 "cores" => println!("{}", num_cpus::get()),
-                _ => unreachable!(),
+                _ => println!("unimplement"),
             }
         }
-        _ => unreachable!(),
+        _ => println!("unimplement"),
     }
 }

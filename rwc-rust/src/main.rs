@@ -1,12 +1,11 @@
+pub mod ownership;
 extern crate clap;
 extern crate num_cpus;
 
 use clap::{App, Arg, SubCommand};
 
-static AUTHOR: &str = "ERIC";
-
 fn main() {
-    println!("{}", AUTHOR);
+    ownership::execute();
     let matches = App::new("hello-cli")
         .version("1.0.0")
         .subcommand(

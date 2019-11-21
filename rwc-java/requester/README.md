@@ -12,3 +12,9 @@ In order to run this example please start the Responder application first
 and then spin up the requester.
 
 More details about RSocket and Spring Boot integration can be found here: https://blog.grapeup.com/read/reactive-service-to-service-communication-with-rsocket-abstraction-over-the-rsocket-66
+
+```bash
+curl http://localhost:8080/customers/1
+curl http://localhost:8080/customers
+curl http://localhost:8080/customers-channel
+```

@@ -57,7 +57,7 @@ public class HelloController {
      * @return
      */
     @MessageMapping("hello")
-    Mono<HelloResponse> getCustomer(HelloRequest helloRequest) {
+    Mono<HelloResponse> requestAndResponse(HelloRequest helloRequest) {
         log.info("Received 'request response' request with payload:{}", helloRequest);
         String id = helloRequest.getId();
         return Mono.just(getHello(id));
@@ -71,7 +71,7 @@ public class HelloController {
      * @return
      */
     @MessageMapping("hello-stream")
-    Flux<HelloResponse> getCustomers(HelloRequests helloRequests) {
+    Flux<HelloResponse> requestStream(HelloRequests helloRequests) {
         log.info("getCustomers multipleCustomersRequest={}", helloRequests);
         List<String> ids = helloRequests.getIds();
         return Flux.fromIterable(ids)
@@ -87,7 +87,7 @@ public class HelloController {
      * @return
      */
     @MessageMapping("hello-channel")
-    Flux<HelloResponse> getCustomersChannel(Flux<HelloRequest> requests) {
+    Flux<HelloResponse> requestChannel(Flux<HelloRequest> requests) {
         return Flux.from(requests)
             .doOnNext(message -> log.info("Received 'request stream' request with payload:{}", message))
             .map(message -> {

@@ -2,6 +2,7 @@ package requester
 
 import (
 	"context"
+	"github.com/feuyeux/hello-rsocket/common"
 	"log"
 
 	"github.com/rsocket/rsocket-go/payload"
@@ -9,15 +10,14 @@ import (
 
 func ExecRequestResponse() {
 	log.Println("====ExecRequestResponse====")
-
-	cli, err := BuildClient()
-	defer cli.Close()
+	client, _ := BuildClient()
+	defer client.Close()
 	// Send request
-	result, err := cli.RequestResponse(payload.NewString("你好", "世界")).Block(context.Background())
-	if err != nil {
-		panic(err)
-	}
-	log.Println("[Request-Response] response:", result)
+	request := &common.HelloRequest{Id: "1"}
+	json, _ := request.ToJson()
+	p := payload.New(json, nil)
+	result, _ := client.RequestResponse(p).Block(context.Background())
+	response := common.JsonToHelloResponse(result.Data())
+	log.Println("[Request-Response] response id:", response.Id, ",name:", response.Name)
 	log.Println("[Request-Response] data:", result.DataUTF8())
 }
-

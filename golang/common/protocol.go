@@ -5,16 +5,16 @@ import (
 )
 
 type HelloRequest struct {
-	Id string
+	Id string `json:"id"`
 }
 
 type HelloRequests struct {
-	Ids []string
+	Ids []string `json:"ids"`
 }
 
 type HelloResponse struct {
-	Id   string
-	Name string
+	Id   string `json:"id"`
+	Name string `json:"name"`
 }
 
 func (hello *HelloRequest) ToJson() ([]byte, error) {

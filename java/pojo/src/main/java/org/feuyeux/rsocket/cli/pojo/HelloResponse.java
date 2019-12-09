@@ -1,12 +1,13 @@
 package org.feuyeux.rsocket.cli.pojo;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.ToString;
 
 /**
  * @author feuyeux@gmail.com
  */
-@Getter
+@Data
 @ToString
 public class HelloResponse {
 

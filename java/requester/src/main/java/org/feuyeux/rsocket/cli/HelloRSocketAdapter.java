@@ -59,7 +59,7 @@ public class HelloRSocketAdapter {
      * @param id
      * @return
      */
-    public Mono<HelloResponse> getCustomer(String id) {
+    public Mono<HelloResponse> getHello(String id) {
         return rSocketRequester
             .route("hello")
             .data(new HelloRequest(id))
@@ -76,7 +76,7 @@ public class HelloRSocketAdapter {
      * @param ids
      * @return
      */
-    public Flux<HelloResponse> getCustomers(List<String> ids) {
+    public Flux<HelloResponse> getHellos(List<String> ids) {
         return rSocketRequester
             .route("hello-stream")
             .data(new HelloRequests(ids))
@@ -93,7 +93,7 @@ public class HelloRSocketAdapter {
      * @param helloRequestFlux
      * @return
      */
-    public Flux<HelloResponse> getCustomerChannel(Flux<HelloRequest> helloRequestFlux) {
+    public Flux<HelloResponse> getHelloChannel(Flux<HelloRequest> helloRequestFlux) {
         return rSocketRequester
             .route("hello-channel")
             .data(helloRequestFlux, HelloRequest.class)

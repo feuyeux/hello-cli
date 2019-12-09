@@ -45,31 +45,31 @@ public class HelloController {
     }
 
     @GetMapping("/hello/{id}")
-    Mono<HelloResponse> getCustomer(@PathVariable String id) {
-        return helloRSocketAdapter.getCustomer(id);
+    Mono<HelloResponse> getHello(@PathVariable String id) {
+        return helloRSocketAdapter.getHello(id);
     }
 
     @GetMapping(value = "/hello-stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    Publisher<HelloResponse> getCustomers() {
+    Publisher<HelloResponse> getHellos() {
         List<String> ids = getRandomIds(5);
         log.info("random={}", ids);
-        return helloRSocketAdapter.getCustomers(ids);
+        return helloRSocketAdapter.getHellos(ids);
     }
 
     @GetMapping(value = "/hello-channel", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    Publisher<HelloResponse> getCustomersChannel() {
+    Publisher<HelloResponse> getHelloChannel() {
         Flux<HelloRequest> map = Flux.interval(Duration.ofMillis(1000))
-            .map(id -> new HelloRequest(getRandom(5)));
-        return helloRSocketAdapter.getCustomerChannel(map);
+            .map(id -> new HelloRequest(getRandomId(5)));
+        return helloRSocketAdapter.getHelloChannel(map);
     }
 
     private List<String> getRandomIds(int max) {
         return IntStream.range(0, max)
-            .mapToObj(i -> getRandom(max))
+            .mapToObj(i -> getRandomId(max))
             .collect(toList());
     }
 
-    private String getRandom(int max) {
+    private String getRandomId(int max) {
         int i = random.nextInt(max);
         return String.valueOf(i);
     }

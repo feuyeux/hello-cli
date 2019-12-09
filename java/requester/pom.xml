@@ -36,7 +36,7 @@
     </properties>
 
     <build>
-        <finalName>cli-requester</finalName>
+        <finalName>requester</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

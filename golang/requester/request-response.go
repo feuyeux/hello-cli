@@ -3,9 +3,8 @@ package requester
 import (
 	"context"
 	"github.com/feuyeux/hello-rsocket/common"
-	"log"
-
 	"github.com/rsocket/rsocket-go/payload"
+	"log"
 )
 
 func ExecRequestResponse() {
@@ -15,7 +14,7 @@ func ExecRequestResponse() {
 	// Send request
 	request := &common.HelloRequest{Id: "1"}
 	json, _ := request.ToJson()
-	p := payload.New(json, nil)
+	p := payload.New(json, []byte(Now()))
 	result, _ := client.RequestResponse(p).Block(context.Background())
 	data := result.Data()
 	response := common.JsonToHelloResponse(data)
@@ -25,5 +24,4 @@ func ExecRequestResponse() {
 	//redisData := redisClient.Get("2019-12-09-RSOCKET")
 	//log.Println("[Request-Response] redisData:", redisData)
 	log.Println("[Request-Response] response id:", response.Id, ",name:", response.Name)
-	log.Println("[Request-Response] data:", result.DataUTF8())
 }

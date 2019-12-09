@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.feuyeux.cli.rsocket</groupId>
-    <artifactId>cli-responder</artifactId>
+    <artifactId>responder</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -30,7 +30,7 @@
     </dependencies>
 
     <build>
-        <finalName>cli-responder</finalName>
+        <finalName>responder</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

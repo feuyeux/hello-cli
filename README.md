@@ -3,16 +3,21 @@
 - java:
   - <https://github.com/apache/commons-cli>
   - <https://github.com/mojohaus/appassembler>
+  
 - rust: 
   ```
   cargo new hello-cli-rust
   ```
+  
 - golang: 
-  ```
+	- spf13/cobra
+	- urfave/cli
+  
+```
   mkdir hello-cli-go
   cd hello-cli-go
   go mod init hello-cli-go
-  ```
+```
 
 - gitignore:
 

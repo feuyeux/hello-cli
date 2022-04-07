@@ -3,7 +3,13 @@
 - java:
   - <https://github.com/apache/commons-cli>
   - <https://github.com/mojohaus/appassembler>
-  
+
+more:
+- [Commons CLI](https://commons.apache.org/proper/commons-cli/)
+- [args4j](http://args4j.kohsuke.org/)
+- [JCommander](http://jcommander.org/)
+- [picocli](https://picocli.info/)
+
 - rust: 
   ```
   cargo new hello-cli-rust

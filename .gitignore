@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/go,rust,java,maven,intellij+iml,visualstudiocode,macos
 # Edit at https://www.gitignore.io/?templates=go,rust,java,maven,intellij+iml,visualstudiocode,macos
 
@@ -45,7 +44,6 @@
 # CMake
 cmake-build-*/
 
-
 # File-based project format
 *.iws
 
@@ -55,13 +53,11 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
-
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
-
 
 ### Intellij+iml Patch ###
 # Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
@@ -154,7 +150,7 @@ Cargo.lock
 !c_cpp_properties.json
 !tasks.json
 !launch.json
-!compile_commands.json 
+!compile_commands.json
 !settings.json
 
 ### VisualStudioCode Patch ###
@@ -164,4 +160,5 @@ Cargo.lock
 # End of https://www.gitignore.io/api/go,rust,java,maven,intellij+iml,visualstudiocode,macos
 build/
 .gradle
-.vscode/settings.json
+.vscode
+.idea
